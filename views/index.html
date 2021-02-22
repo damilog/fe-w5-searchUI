@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쇼핑하우 by daisycommerce</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.scss" />
+  </head>
+  <body>
+    <header>
+      <div class="header__search-wrap">
+        <a>
+          <img
+            id="main-logo"
+            src="//search1.daumcdn.net/search/cdn/simage/shopping/v2/common/nav/logo_shw.png"
+            alt="쇼핑하우 by kakaocommerce"
+          />
+        </a>
+        <form class="header__search-form">
+          <div class="search-form__input-wrap">
+            <input type="text" class="search-form__input" />
+          </div>
+
+          <button class="search-form__btn">
+            <!-- <span class="search-form__btn__icon"></span> -->
+          </button>
+        </form>
+      </div>
+      <nav class="header__nav-menu">
+        <div class="list__category">
+          <button id="list__category-btn"></button>
+          <span>카테고리</span>
+        </div>
+        <ul class="header__nav-menu__list">
+          <li>핫딜</li>
+          <li>베스트100</li>
+          <li>할인특가</li>
+          <li>기획전</li>
+        </ul>
+        <ul class="header__nav-menu__hashtag">
+          <li>#건강식품</li>
+          <li>#제철음식</li>
+          <li>#블루투스이어폰</li>
+          <li>#커블체어</li>
+          <li>#노트북</li>
+        </ul>
+        <ul class="header__nav-menu__user">
+          <li><button id="user__login-btn"></button><span>로그인</span></li>
+          <li>
+            <button id="user__recently-btn"></button><span>최근 본 상품</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-top">
+        <div class="section-top__container">
+          <div class="section-top__item">
+            <img
+              src="http://shop4.daumcdn.net/shophow/sib/0_210219174900_cCDgZtbAhPiBQqcJamsODOWNoVrXILeM"
+            />
+          </div>
+          <div class="section-top__item" id="items-carousel">
+            <div class="item__carousel-box">
+              <!-- 캐러셀 section-->
+              <div class="item__carousel-wrap"></div>
+            </div>
+
+            <div class="item__carousel-icon">
+              <span class="inner-paging">
+                <span class="btn-paging">
+                  <span class="paging__num-selected">1</span>
+                </span>
+                <span class="btn-paging"
+                  ><span class="paging__num">2</span></span
+                >
+                <span class="btn-paging"
+                  ><span class="paging__num">3</span></span
+                >
+              </span>
+              <button class="paging-btn" id="paging-btn-prev">
+                <span id="prev"></span>
+              </button>
+              <button class="paging-btn" id="paging-btn-next">
+                <span id="next"></span>
+              </button>
+            </div>
+          </div>
+          <!-- 더 보기 section -->
+        </div>
+        <div class="view-more">
+          <span class="view-more__btn"></span>
+        </div>
+      </section>
+    </main>
+
+    <div class="carousel__title">지금뜨는 테마 카테고리</div>
+
+    <section class="section-bottom">
+      <div class="bottom__carousel_wrap">
+        <!-- 하단 캐러셀 -->
+      </div>
+      <div class="b_item__carousel-icon">
+        <button class="b_paging-btn" id="b_paging-btn-prev">
+          <span id="prev"></span>
+        </button>
+        <button class="b_paging-btn" id="b_paging-btn-next">
+          <span id="next"></span>
+        </button>
+      </div>
+    </section>
+    <script type="module" src="../public/javascripts/main.js"></script>
+  </body>
+</html>
