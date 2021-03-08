@@ -3,14 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "watch-scss": "sass --watch public/stylesheets/style.scss:public/stylesheets/style.css",
     "server-start": "nodemon ./server.js",
     "start": "concurrently --kill-other-on-fail \"npm run watch-scss\" \"npm run server-start\"",
+=======
+    "start": "nodemon ./server.js",
+>>>>>>> b22ea64 ([Daisy] step1 : 쇼핑 하우 project pull & rebase (#12))
     "start-p": "parcel ./views/index.html --open",
     "build:sass": "sass stylesheets/scss:dist/css"
   },
   "dependencies": {
+<<<<<<< HEAD
     "concurrently": "^6.0.0",
+=======
+>>>>>>> b22ea64 ([Daisy] step1 : 쇼핑 하우 project pull & rebase (#12))
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
