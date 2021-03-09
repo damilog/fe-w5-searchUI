@@ -5,7 +5,7 @@
   "scripts": {
     "watch-scss": "sass --watch public/stylesheets/style.scss:public/stylesheets/style.css",
     "server-start": "nodemon ./server.js",
-    "start": "concurrently --kill-other-on-fail \"npm run watch-scss\" \"npm run server-start\"",
+    "start": "concurrently --kill-other-on-fail \"npm run server-start\"",
     "start-p": "parcel ./views/index.html --open",
     "build:sass": "sass stylesheets/scss:dist/css"
   },
