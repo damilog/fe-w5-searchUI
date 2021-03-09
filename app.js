@@ -29,11 +29,13 @@ app.use(
   sassMiddleware({
     src: path.join(__dirname, "public"),
     dest: path.join(__dirname, "public"),
-    indentedSyntax: true, // true = .sass and false = .scss
+    indentedSyntax: false, // true = .sass and false = .scss
     sourceMap: true,
+    outputStyle: "compressed",
   })
 );
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.use("/", indexRouter);
 app.use("/topCarousel", topCarouselRouter); //
 app.use("/bottomCarousel", bottomCarouselRouter); //

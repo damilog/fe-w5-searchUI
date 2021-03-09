@@ -1,6 +1,7 @@
 @import "./nav.scss";
 @import "./main-top.scss";
 @import "./bottom-section.scss";
+@import "./roll-search.scss";
 
 $site_max_width: 960px;
 $font_color: #333;
@@ -15,7 +16,8 @@ $font_family: Arial, sans-serif;
   box-sizing: border-box;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 

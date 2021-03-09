@@ -1,0 +1,20 @@
+.roll-search-wrap {
+  position: absolute;
+  left: 18%;
+  outline: blue solid;
+  width: 578px;
+  height: 23px;
+  top: 16px;
+
+  .roll-search-list {
+    outline: red solid;
+    width: 578px;
+    height: 374px;
+
+    li {
+      color: rgb(147, 147, 147);
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
