@@ -4,19 +4,18 @@ import BottomCarouselUI from "./BottomCarouselUI.js";
 import ViewMoreUI from "./ViewMoreUI.js";
 import _ from "./util.js";
 import { SearchBarUI } from "./SearchBarUI.js";
+import { SearchPopupUI } from "./SearchPopupUI.js";
 
-const $rollingSearchList = _.$(".roll-search-list");
+const API = "https://shoppinghow.kakao.com/v3/m/search/extends.json";
 
 const topCarouselUI = new TopCarouselUI();
 const viewMoreUI = new ViewMoreUI();
 const bottomCarouselUI = new BottomCarouselUI();
-const searchBarUI = new SearchBarUI(
-  "https://shoppinghow.kakao.com/v3/m/search/extends.json",
-  $rollingSearchList
-);
+const searchBarUI = new SearchBarUI(API);
+const searchPopupUI = new SearchPopupUI(API);
 
 searchBarUI.getJson();
 searchBarUI.renderKeywordList();
 searchBarUI.setToRepeatRoll();
-searchBarUI.roll();
-searchBarUI.renderPopUpBox();
+// searchBarUI.roll();
+// searchPopupUI.renderPopUpBox();

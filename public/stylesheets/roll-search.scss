@@ -1,4 +1,6 @@
 $search_color: #cecfd1;
+$search-point-color: #f95139;
+
 .header__search-wrap {
   background-color: white;
   top: 43px;
@@ -20,7 +22,7 @@ $search_color: #cecfd1;
     margin: 0;
     display: inline-block;
 
-    .search-form__input-wrap {
+    &__input-wrap {
       height: 578px;
       height: 54px;
       padding: 16px 60px 14px 30px;
@@ -28,9 +30,13 @@ $search_color: #cecfd1;
       border-radius: 10px;
     }
 
-    input {
+    &__input-wrap:focus-within {
+      border: $search-point-color 1px solid;
+    }
+
+    .search-form__input {
       width: 578px;
-      height: 22px;
+      height: 23px;
       font-size: 24px;
       border: none;
     }
@@ -53,10 +59,12 @@ $search_color: #cecfd1;
   position: absolute;
   line-height: 22px;
   left: 20%;
-  overflow: hidden;
+  // overflow: hidden;
   width: 578px;
   height: 23px;
   top: 16px;
+  user-select: none; // input에 focus 되게 해주는 속성
+  pointer-events: none; // input에 focus 되게 해주는 속성
 
   .roll-search-list {
     position: absolute;
