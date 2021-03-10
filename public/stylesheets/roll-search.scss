@@ -19,7 +19,7 @@ $search_color: #cecfd1;
     left: 18%;
     margin: 0;
     display: inline-block;
-    //outline: blue solid;
+
     .search-form__input-wrap {
       height: 578px;
       height: 54px;
@@ -53,17 +53,15 @@ $search_color: #cecfd1;
   position: absolute;
   line-height: 22px;
   left: 20%;
-  outline: blue solid;
-  //overflow: hidden;
+  overflow: hidden;
   width: 578px;
   height: 23px;
   top: 16px;
 
   .roll-search-list {
     position: absolute;
-    // outline: red solid;
     width: 578px;
-    top: 0px; //-30px;하면됨
+    top: 0px;
 
     li {
       margin-bottom: 10px;

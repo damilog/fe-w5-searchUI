@@ -11,7 +11,7 @@ const topCarouselUI = new TopCarouselUI();
 const viewMoreUI = new ViewMoreUI();
 const bottomCarouselUI = new BottomCarouselUI();
 const searchBarUI = new SearchBarUI(
-  "https://m.shoppinghow.kakao.com/v3/m/search/extends.json",
+  "https://shoppinghow.kakao.com/v3/m/search/extends.json",
   $rollingSearchList
 );
 

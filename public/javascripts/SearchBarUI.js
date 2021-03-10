@@ -1,3 +1,4 @@
+import { NotExtended } from "http-errors";
 import _ from "./util";
 
 const SearchBarUI = function (url, listWrap) {
@@ -30,16 +31,21 @@ SearchBarUI.prototype.drawKeywordList = async function () {
 };
 
 SearchBarUI.prototype.setToRepeatRoll = function () {
-  const timer = setInterval(this.roll.bind(this), 1000);
-  if (this.rollSize === 10) clearInterval(timer);
+  const timer = setInterval(this.roll.bind(this), 3000);
 };
 
 SearchBarUI.prototype.roll = function () {
-  this.$rollingSearchList.style.transition = "transform 0.3s ease-in-out";
-
-  this.$rollingSearchList.style.transform =
-    "translateY(" + -32 * this.rollSize + "px)";
-  this.rollSize++;
+  if (this.rollSize === 11) {
+    this.$rollingSearchList.style.transition = "";
+    this.$rollingSearchList.style.transform = "";
+    this.$rollingSearchList.style.top = 0;
+    this.rollSize = 0;
+  } else {
+    this.$rollingSearchList.style.transition = "transform 0.5s ease-in-out";
+    this.$rollingSearchList.style.transform =
+      "translateY(" + -32 * this.rollSize + "px)";
+    this.rollSize++;
+  }
 };
 
 export { SearchBarUI };
