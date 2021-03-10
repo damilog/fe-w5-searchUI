@@ -1,0 +1,43 @@
+$popup-title-color: #a6a6a6;
+$search-point-color: #f95139;
+
+.popup-search-wrap {
+  position: absolute;
+  left: 18%;
+  border: 1px solid $search-point-color;
+  border-radius: 10px;
+  background-color: white;
+  width: 670px;
+  z-index: 1;
+
+  &__inner {
+    padding: 25px 29px;
+    strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: $popup-title-color;
+      padding-bottom: 5px;
+    }
+
+    .inner__keyword-list {
+      float: left;
+      width: 50%;
+      padding-bottom: 6px;
+
+      li {
+        font-size: 14px;
+        padding: 12px 15px 0 0;
+        letter-spacing: -0.7px;
+        line-height: 21px;
+        .list__text {
+          margin-right: 10px;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: -0.7px;
+        }
+      }
+    }
+  }
+}

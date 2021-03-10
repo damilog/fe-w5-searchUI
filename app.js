@@ -1,5 +1,6 @@
 //서버에서 사용하게 될 미들웨어
 /*-------express 객체 선언 부, 우리가 사용할 미들웨어를 비롯해 Express 제공 미들웨어 객체 선언------*/
+
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
@@ -29,11 +30,13 @@ app.use(
   sassMiddleware({
     src: path.join(__dirname, "public"),
     dest: path.join(__dirname, "public"),
-    indentedSyntax: true, // true = .sass and false = .scss
+    indentedSyntax: false, // true = .sass and false = .scss
     sourceMap: true,
+    outputStyle: "compressed",
   })
 );
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.use("/", indexRouter);
 app.use("/topCarousel", topCarouselRouter); //
 app.use("/bottomCarousel", bottomCarouselRouter); //
