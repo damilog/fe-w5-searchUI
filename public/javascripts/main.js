@@ -16,6 +16,7 @@ const searchBarUI = new SearchBarUI(
 );
 
 searchBarUI.getJson();
-searchBarUI.drawKeywordList();
+searchBarUI.renderKeywordList();
 searchBarUI.setToRepeatRoll();
 searchBarUI.roll();
+searchBarUI.renderPopUpBox();
