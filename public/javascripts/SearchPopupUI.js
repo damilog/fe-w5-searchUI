@@ -1,8 +1,9 @@
 import { SearchBarUI } from "./SearchBarUI";
 import _ from "./util";
 
-const SearchPopupUI = function (url) {
+const SearchPopupUI = function (url, input) {
   this.url = url;
+  this.$input = input;
   this.init();
 };
 
@@ -46,16 +47,18 @@ SearchPopupUI.prototype = {
   },
 
   init() {
-    const $input = _.$(".search-form__input");
-    $input.addEventListener("focus", this.showPopUpBox);
+    this.$input.addEventListener("focus", this.showPopUpBox);
+    this.$input.addEventListener("input", this.hidePopUpBox);
   },
 
   showPopUpBox() {
-    const $input = _.$(".search-form__input");
-    // $input.style.display = "none";
+    _.$(".popup-search-wrap").style.display = "block";
+    _.$(".roll-search-wrap").style.display = "none";
+  },
+
+  hidePopUpBox() {
+    _.$(".popup-search-wrap").style.display = "none";
   },
 };
-
-// SearchPopupUI.prototype.checkSearchFocus = function () {};
 
 export { SearchPopupUI };
