@@ -3,6 +3,7 @@ import _ from "./util";
 
 const SearchPopupUI = function (url) {
   this.url = url;
+  this.init();
 };
 
 SearchPopupUI.prototype = {
@@ -42,6 +43,16 @@ SearchPopupUI.prototype = {
     </div>`;
 
     _.$(".popup-search-wrap").insertAdjacentHTML("afterbegin", outerTemplate);
+  },
+
+  init() {
+    const $input = _.$(".search-form__input");
+    $input.addEventListener("focus", this.showPopUpBox);
+  },
+
+  showPopUpBox() {
+    const $input = _.$(".search-form__input");
+    // $input.style.display = "none";
   },
 };
 
